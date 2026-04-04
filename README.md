@@ -12,10 +12,26 @@ Newsreader font, packaged for React Native. Exports a typed weight map (PostScri
 
 ```bash
 npm install @devraj-labs/rn-font-newsreader
+```
+
+Then add (or update) `react-native.config.js` in your app root to include the font assets:
+
+```js
+module.exports = {
+  assets: [
+    './node_modules/@devraj-labs/rn-font-newsreader/assets/fonts',
+    // ...other font packages
+  ],
+};
+```
+
+Then link the fonts into your native projects:
+
+```bash
 npx react-native-asset
 ```
 
-`react-native-asset` reads `react-native.config.js` from the package and copies the `.ttf` files into your native iOS/Android project automatically. Re-run it whenever you add or update a font package.
+Re-run `npx react-native-asset` and rebuild your app whenever you add or update a font package.
 
 ## Usage
 

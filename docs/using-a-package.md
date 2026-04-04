@@ -4,10 +4,27 @@
 
 ```bash
 npm install @devraj-labs/rn-font-inter
-npx react-native-asset   # links .ttf files into native iOS/Android projects
 ```
 
-`react-native-asset` reads `react-native.config.js` from the installed package and copies the fonts automatically. Re-run this whenever you add or update a font package.
+Then add (or update) `react-native.config.js` in your app root to tell `react-native-asset` where the font files are:
+
+```js
+// react-native.config.js
+module.exports = {
+  assets: [
+    './node_modules/@devraj-labs/rn-font-inter/assets/fonts',
+    // add one entry per font package you install
+  ],
+};
+```
+
+Then link the fonts into your native projects:
+
+```bash
+npx react-native-asset
+```
+
+Re-run `npx react-native-asset` and rebuild your app whenever you add or update a font package. Metro reload alone is not enough — the `.ttf` files must be copied into the native iOS/Android projects first.
 
 ---
 
