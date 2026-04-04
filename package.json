@@ -1,0 +1,37 @@
+{
+  "name": "@devraj-labs/rn-font-template",
+  "version": "1.0.0",
+  "description": "Template for creating and publishing React Native font packages to npm.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "author": "devraj-labs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devraj-labs/rn-font-template"
+  },
+  "keywords": [
+    "react-native",
+    "fonts",
+    "typography",
+    "template",
+    "vajra-ui"
+  ],
+  "files": [
+    "dist",
+    "assets/fonts",
+    "react-native.config.js"
+  ],
+  "scripts": {
+    "init": "node scripts/init.js",
+    "generate": "bash scripts/generate-font-package/run.sh",
+    "build": "tsc",
+    "release": "npm run build && npm publish --access public"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
