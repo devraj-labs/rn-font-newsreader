@@ -1,6 +1,6 @@
 {
   "name": "@devraj-labs/rn-font-newsreader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Newsreader font package for React Native",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
